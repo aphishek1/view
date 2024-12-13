@@ -1,0 +1,229 @@
+
+
+
+body{
+cursor : url(images/favicon.ico),auto;
+}
+
+
+
+@keyframes fadout
+{
+from{opacity:0;transform:scale(1.5);}
+to{opacity:0.99;}
+}
+
+
+p{
+transition:2s;
+animation:fadout 2s ease-in-out;
+}
+
+
+</style>
+
+<style>
+
+#navbar
+{
+background:tel;
+cursor:pointer;
+}
+
+#navbar ol
+
+{
+
+margin:auto;
+width:35%;
+margin-top:100px;
+}
+
+#navbar ol li
+{
+list-style:none;
+display:inline-block;
+padding:20px;
+background:#32a7eb;
+margin-left:0px;
+transition:1s;
+box-shadow: 10px 10px 10px gray;
+
+}
+
+
+#navbar ol li:hover
+{
+transform:scale(3) rotation(360deg);
+border-radius:10px;
+background:#8cbfdd;
+text align:center;
+}
+
+
+a:link{color:green;text-decoration:none}
+a:visited{color:white;}
+a:hover{text-decoration:underline:color:white}
+a:active{background:orange;}
+
+
+
+
+
+
+
+
+.picstyle
+{
+width:100px;
+height:100px;
+cursor:pointer;
+box-shadow:7px 7px 20px #D28B00;
+border-radius;250px;
+transition:0.90s ease-in-out;
+margin:80px;
+}
+
+.picstyle:hover
+{
+transform:scale(2.9);
+border-radius:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+cursor : url(images/favicon.ico),auto;
+}
+
+
+
+@keyframes fadout
+{
+from{opacity:0;transform:scale(1.5);}
+to{opacity:0.99;}
+}
+
+
+p{
+transition:2s;
+animation:fadout 2s ease-in-out;
+}
+
+
+</style>
+
+<style>
+
+#navbar
+{
+background:tel;
+cursor:pointer;
+}
+
+#navbar ol
+
+{
+
+margin:auto;
+width:35%;
+margin-top:100px;
+}
+
+#navbar ol li
+{
+list-style:none;
+display:inline-block;
+padding:20px;
+background:#32a7eb;
+margin-left:0px;
+transition:1s;
+box-shadow: 10px 10px 10px gray;
+
+}
+
+
+#navbar ol li:hover
+{
+transform:scale(3) rotation(360deg);
+border-radius:10px;
+background:#8cbfdd;
+text align:center;
+}
+
+
+a:link{color:green;text-decoration:none}
+a:visited{color:white;}
+a:hover{text-decoration:underline:color:white}
+a:active{background:orange;}
+
+</style>
+
+<body>
+
+<link rel="icon" href="images/favicon.ico">
+
+
+<div id="navbar">
+<ol>
+<li><a href="list.html">Home</a></li>
+<li><a href="website full interactive.html">Photoshow</a></li>
+<li><a href="prcp.html">Pages</a></li>
+<li><a href="linoo.html">Responsive</a></li>
+
+
+
+</ol>
+</div>
+
+
+</body>
+
+<p>
+</p>
+<div>
+<hr color="#240007" size="7" width="90%">
+</div>
+
+
+
+
+
+
+
+<hr color="#6DAD68" size="9" width="60%/">
+
+<p>
+</p>
+
+
+
+
+
+
+
+
+
+<body style="background:#ffffff">
+
+</body>
+</html>
+
+
