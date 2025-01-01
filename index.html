@@ -1,0 +1,391 @@
+﻿<!doctype html>
+<head>
+<title>Profile Page</title>
+
+
+
+<link rel="stylesheet"a href="inde.css"></a>
+
+
+<style>
+
+    @keyframes move
+     {
+     from{margin-left:-30px;}
+     to{margin-right:18%;}
+      }
+
+      #myheading2
+     {
+    color:white;
+    width:100%;
+    font-size:25px;
+    text-shadow:5px 0px 5px teal;
+    animation:move 2s ease-in infinite alternate;
+    }
+    
+ 
+   #mybox{
+ 
+   margin: auto;
+   text-align: center;
+   color: whitesmoke;
+   font-size: 20px;
+   border-radius: 2px;
+
+  }
+ 
+ 
+  #but{
+   margin: auto;
+   color: burlywood;
+   text-align: center;
+  }
+ 
+ </style>
+ 
+ <body>
+    <div id="mybox">Time To Time Update</div>
+    <div id="but">
+    <button onClick="stopclock()">Stop</button>
+    <button onClick="starclock()">Start</button>
+   </div>
+    
+    
+    <script>
+ 
+ 
+     var clock = document.getElementById("mybox")
+     document.bgcolor = "Green"
+     clock.style ="box-shadow: 2px 2px 0px gray;text-align:center;background:black;"
+     clock.style.width ="200px"
+     clock.style.height ="20px"
+     var d
+ 
+     function show()
+     {
+      d = new Date()
+      clock.innerHTML=d.toLocaleTimeString()
+     }
+ 
+     var t = setInterval("show()",1000)
+     function stopclock()
+     {
+       clearInterval(t)
+     }
+ 
+     function starclock()
+     {
+      t = setInterval("show()",1000)
+     }
+ 
+  </script>
+ 
+ 
+</body>
+
+
+
+
+
+<body>
+    
+    <div id="bar"><button id="dark">Dark🧐</button><br><button id="light">light🙂</button>
+
+
+      <div id="topad" >
+        Welcome
+        </div>
+   
+        
+      
+
+
+
+</body>
+
+
+
+
+
+
+
+</head>
+
+
+
+<section class="explore">
+
+  <div class="explore-content">
+
+  
+     <br>
+    
+ </div> 
+  
+</section>
+
+
+
+
+
+<div id="row1">
+
+</div>
+
+
+
+
+
+<body>
+
+
+
+
+<nav>
+<div id ="container">
+   <div id="menu">
+   <ol>
+   <li><a href="list.html">List</a></li>
+   <li><a href="website full interactive.html">Photoshow</a></li>
+   <li><a href="prcp.html">Pages</a></li>
+  <li><a href="proj.html">Projects</a></li>
+ 
+  </ol>
+ 
+</div>
+
+<span id="icon" style="font-size:50px;text-align:right ;">&#9779;</span>
+</nav>
+
+<script>
+   const icon = document.querySelector('.icon')
+   const menu = document.querySelector('.menu')
+
+   icon.addEventListener('click',()=>{menu.classList.toggle(menu)})
+   
+
+</script>
+
+
+</body>
+
+<div>
+<hr color="teal" size="7" margin:"auto" width="90%">
+</div>
+
+
+
+
+
+
+<div class="line">
+</div>
+
+<p>
+</p>
+
+
+<div class="name">
+<h1 id="myheading2"><font color="skyblue">Abhishek</font> Kumar</h1>
+ <h1><font color="#DEFAFF">About</font></h2>
+
+
+
+</div>
+
+<p>
+
+<div id="conti">
+
+ <p>
+ I'm a Frontend Developer with a background in
+ Psychology, which gives me a unique edge in
+ empathizing with users and improving
+ their experience through design. My research
+ experience has refined my problem-solving
+ skills and user insights. I'm constantly
+ seeking new ways to learn and grow through
+ real-world experiences.</p>
+ <p>
+ Frontend Developer designers create visually appealing
+ designs that align with brand guidelines
+ and design principles. Visual design involve
+ color theory, typography, layout, and graphic
+ design skills to create polished and cohesive
+ interfaces.
+ </p>
+ <p>
+ "As a recent graduate with a degree in graphic
+ design, I'm excited to launch my career in UX
+ & UI design. Skilled in Adobe
+ Creative Suite, Sketch, and InVision, I'm
+ passionate about creating intuitive and
+ user-friendly interfaces for web and mobile
+ applications.
+ </p>
+
+</div>
+
+
+</body>
+
+<body>
+<a href="p1.html">
+<img src="images/6.jpg" title="Working" class="picstyle">
+</a>
+ 
+
+
+<a href="p2.html">
+<img src="images/7.jpg" title="Girl world" class="picstyle">
+</a>
+<a href="p3.html">
+<img src="images/8.jpg" title="Tracking" class="picstyle">
+</a>
+<a href="p4.html">
+<img src="images/9.jpg" title="City" class="picstyle">
+</a>
+
+
+<a href="p5.html">
+<img src="images/21.jpg"title="Sunset" class="picstyle">
+</a>
+
+
+
+
+<a href="p18.html">
+<img src="images/38.jpg"title="Leaf" class="picstyle">
+</a>
+
+
+
+
+
+</body>
+
+
+
+
+
+<style>
+
+    #bar{
+      text-align:right;
+      padding-right:50px;
+    }
+    
+    #dark,#light
+    {
+      background:black;
+      cursor:pointer;
+      text-align: center;
+      color: gold;
+      border-radius: 20px;
+      box-shadow: 2px 5px 5px black;
+      font-size: 15px;
+    }
+    
+</style>
+    
+<body>
+    
+      
+      <script>
+    
+       var d =document.getElementById("dark")
+       var l =document.getElementById("light")
+       var m =document.createElement("span")
+       var b =document.getElementById("bl")
+       document.body.appendChild(m)
+    
+        function f1()
+        {
+          if(document.body.style.background="black")
+    
+          {
+            
+            
+            document.body.style="background=black;color:;"
+            
+          }
+          else
+          {
+    
+            
+             document.body.style="background:black;color:white;"
+          }
+      }
+        
+      m.style="transition:0.5s;opacity:0;position:absolute;top:0px;left:0px"
+      
+    
+      d.onclick = function()
+      {
+        document.body.style="background:black;color:white;"
+        var c=document.style.getElementById("conti")
+        document.body.appendChild(c)
+    
+      
+         c.style.background="black"
+         
+
+    
+      }
+       
+      l.onclick =function()
+      {
+        document.body.style="background:;color:;"
+      }
+    
+      d.onmouseover =function(e)
+      {
+        m.style.opacity=1
+        m.style.top =e.pageY+4+"px"
+        m.style.left =e.pageX-20+"px"
+        
+        document.title ="x ="+e.pageX+" y = "+e.pageY
+        d.style.transform="rotate(360deg)"
+    
+      }
+    
+      d.onmouseout =function()
+      {
+        m.style.opacity=0
+      }
+      
+      
+    
+      l.onmouseover = function(e)
+      {
+        m.style.opacity=1
+        m.style.top =e.pageY+5+"px"
+        m.style.left =e.pageX-65+"px"
+        
+        document.title ="x ="+e.pageX+" y ="+e.pageY
+      }
+    
+      l.mouseout =function(e)
+      {
+        m.style.opacity=0
+        
+      }
+    
+      
+    
+     
+      </script>
+
+     
+
+  
+
+</body>
+
+
+
+
+</html>
+
+
