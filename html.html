@@ -1,0 +1,573 @@
+<!doctype html>
+<html>
+<head> <title>List</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ 
+
+
+<link href="images/cross.png" rel="icon">
+
+</head>
+
+
+
+
+
+<body>
+<a href="index.html">
+<i class="fa-solid fa-backward fa-bounce fa-xl" style="color: #74C0FC;"></i>
+</a>
+</body>
+
+
+
+<style>
+
+
+js-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.99);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.js-preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@-webkit-keyframes dot {
+  50% {
+      -webkit-transform: translateX(96px);
+      transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+      -webkit-transform: translateX(96px);
+      transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+      -webkit-transform: translateX(-31px);
+      transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+      -webkit-transform: translateX(-31px);
+      transform: translateX(-31px);
+  }
+}
+
+.preloader-inner {
+  position: relative;
+  width: 142px;
+  height: 40px;
+  background: transparent;
+}
+
+.preloader-inner .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: black;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+  animation: dot 2.8s infinite;
+}
+
+.preloader-inner .dots {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+  animation: dots 2.8s infinite;
+}
+
+.preloader-inner .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background:black;
+  border-radius: 50%;
+}
+
+
+#js-preloader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #F2F2F2;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+
+
+.picstyle
+{
+
+
+width:50%;;
+margin:auto;
+transition:0.30s ease-out;
+margin-top:100px;
+height:400px;
+display:block;
+
+
+
+}
+
+
+.picstyle:hover
+{
+
+margin:auto;
+transform:scale(1.5);
+}
+
+
+
+
+</style>
+<div style="height:60px
+;text-align:centre;">
+<a href="prcp.html">
+<img src="images/cross.png" width="3%"></a></div>
+
+
+<a href="images/bgv.html">
+
+</a>
+
+
+<div id="js-preloader" class="js-preloader">
+  <div class="preloader-inner">
+    <span class="dot"></span>
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   </div>
+</div>
+
+
+
+<script>
+  window.addEventListener('load',() =>{
+      setTimeout(()=>{
+          document.getElementById('js-preloader').style.display= 'none';
+          document.getElementById('content').style.display='block';
+      },1000);
+  });
+  
+  
+</script>
+
+
+
+
+<style>
+
+@keyframes ani1
+{
+from{margin-left:0px;}
+to{margin-left:-200%}
+}
+
+#mask
+{
+background:black;
+width:90%;
+height:100px;
+margin:auto;
+box-shadow:10px 10px 10px gray;
+overflow:hidden;
+border-radius:20px;
+}
+
+#news
+{
+color:yellow;
+width:800%;
+height:100px;
+font-family:arial black;
+font-size:60px;
+padding:10px;
+transition:10s;
+animation:ani1 20s linear  infinite;
+}
+
+
+
+</style>
+
+<body>
+<div id="mask">
+<div id="news"><u>404 Error</u> Not Anymore .Thank You For Visiting Here Are Some Example Pages of HTML/CSS You Can Check Below./
+</div>
+</div>
+
+<style>
+
+#myheading2
+{
+color:#F06417;
+display:block;
+width:100%;
+font-size:120px;
+text-shadow:5px 5px 5px black;
+animation:blink 9s linear infinite;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+<h1 style="text-align:center;background:#cfa658;color:white;font-family:Arial black;font-size:60px;
+box-shadow:10px 10px 10px gray">Topics List </h1>
+
+
+
+
+
+</style>
+
+
+<div id="navbar">
+<h1 style="text-align:center;font-family:verdana,Arial black;font-size:30px;
+background:#ffffff;color:Black;font-family: Arial, Helvetica, sans-serif;">
+<ol>
+<li><a href="website full interactive.html">Photo Gallery</a></li>
+<br>    
+<li><a href="tble.html">Table</a></li>
+<br>
+<li><a href="list.html">List In Html</a></li>
+<br>
+<li><a href="bookma.html">Bookmark*</a></li>
+<br>
+<li><a href="Supra page 2nd.html">Toyota*</a></li>
+<br>
+<li><a href="linoo.html">Responsive</a></li>
+<br>
+<li><a href="index.html">Profile*</a></li>
+<br>
+<li><a href="oreo.html">Company*</a></li>
+<br>
+<li><a href="ani.html">Banner</a></li>
+<br>
+<li><a href="slides.html">Slides</a></li>
+<br>
+<li><a href="headlines - Co.html">Headlines</a></li>
+<br>
+<li><a href="backg.html">Backgrounds</a></li>
+<br>
+<li><a href="log - Copy.html">Log Form</a></li>
+<br>
+<li><a href="iframe.html">Iframe</a></li>
+<br>
+<li><a href="vid.html">Video/Audio</a></li>
+<br>
+<li><a href="vidb.html">Video/Background</a></li>
+<br>
+<li><a href="flex.html">Flex/Background*</a></li>
+<br>
+<li><a href="draw.html">Canvas/Drawing</a></li>
+<br>
+<li><a href="flex - Copy.html">Flex/option</a></li>
+<br>
+<li><a href="prespective.html">Prespective</a></li>
+<br>
+<li><a href="https://aphishek1.github.io/cart/">Cart</a></li>
+<br>
+<li><a href="https://www.behance.net/43c4d6f5">Behance</a></li>
+
+<h1 style="text-align:center;background:#cfa658;color:white;font-family:Arial black;font-size:60px;
+box-shadow:10px 10px 10px gray"></h1>
+
+</ol>
+
+</div>
+
+
+
+
+
+<style>
+
+@keyframes comfromright
+{
+from{margin-right:0px;}
+to{margin-right:990px;}
+}
+
+@keyframes fadout
+{
+from{opacity:0;transform:scale(1.5);}
+to{opacity:0.99;}
+}
+
+@keyframes blink
+{from{opacity:0}
+to{opacity:1}
+}
+
+
+@keyframes move
+{
+from{margin-left:30%;}
+to{margin-left:-30px;}
+}
+
+
+#myheading1
+{color:#fbd10d;
+display:block;
+font-size:100px;
+width:60%;
+text-shadow:5px 5px 5px black;
+animation:move 3s ease-in infinite alternate;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1 id="myheading2">Practice Pages!</h1>
+
+
+
+
+
+</body>
+
+
+<body>
+
+<style>
+
+
+
+#navbar
+{
+background:tal;
+cursor:pointer;
+}
+
+#navbar ol
+{
+
+margin:auto;
+width:40%;
+margin-top:50px;
+text-align:centre;
+}
+
+#navbar ol li
+{
+list-style:none;
+padding:30px;
+background:black;
+margin-left:0px;
+transition:1s;
+box-shadow: 10px 5px 10px gray;
+padding:26px;
+border-radius: 30px;
+animation: move 2s;
+color: white;
+
+}
+
+
+#navbar ol li:hover
+{
+transform:scale(1.0) rotate(-5deg);
+border-radius:90px;
+background: #F06417;
+width: 90%;
+
+}
+
+
+a:link{color:white;text-decoration:wavy}
+a:visited{color:ghostwhite;}
+a:hover{text-decoration:underline;color:white}
+a:active{background:orange;}
+
+
+
+
+@keyframes comefromright
+{
+from{margin-right:900px;}
+to{margin-right:0px;}
+}
+
+@keyframes fadout
+{
+from{opacity:0;transform:scale(1.5);}
+to{opacity:0.99;}
+}
+
+@keyframes blink
+{from{opacity:0}
+to{opacity:1}
+}
+
+
+@keyframes mov
+{
+from{margin-left:50%;}
+to{margin-left:30px;}
+}
+
+@keyframes move
+{
+from{margin-left:-30%;}
+to{margin-left:30%;}
+}
+
+
+#myheading1
+{color:#fbd10d;
+display:block;
+font-size:100px;
+width:60%;
+text-shadow:5px 5px 5px black;
+animation:move 3s ease-in infinite alternate;
+}
+
+    #bar{
+      width:100%;
+      text-align:right;
+      
+    }
+    
+    #dark
+    {
+      background:black;
+      cursor:pointer;
+      text-align:right;
+      color: gold;
+      font-size: 20px;
+      border-radius: 20px;
+      box-shadow: 2px 5px 5px black;
+    }
+
+    #dark :hover {
+      a:link{color:white;text-decoration:none};
+
+    }
+
+
+    #navbar
+{
+background:tal;
+cursor:pointer;
+}
+
+#navbar ol
+{
+
+margin:auto;
+width:40%;
+margin-top:50px;
+text-align:centre;
+}
+
+#navbar ol li
+{
+list-style:none;
+padding:30px;
+background:black;
+margin-left:0px;
+color: #ffffff;
+transition:1s;
+text-align: center;
+font-size: 30px;
+box-shadow: 10px 5px 10px gray;
+border-radius: 40px;
+transition:2s;
+animation:mov 2s ease-in-out;
+
+
+}
+
+
+#navbar ol li:hover
+{
+transform:scale(1)rotate(6deg);
+border-radius:20px;
+background:#F06417;
+
+}
+
+
+a:link{color:white;text-decoration:none}
+a:visited{color:white;}
+a:hover{text-decoration:underline;color:white}
+a:active{background:orange;}
+
+
+</style>
+
+
+
+
+
+</body>
+
+
+</html>
+
