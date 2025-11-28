@@ -1,0 +1,96 @@
+<!doctype html>
+<head>
+<title>Flex</title>
+
+</head>
+
+<style>
+
+
+@keyframes ani1
+{
+from{transform:rotateY(360deg)}
+to{transform:rotateY(0deg)}
+}
+
+@keyframes ani2
+{
+from{tranform:rotateY(360deg) }
+to{transform:rotateY(0deg) }
+}
+
+@keyframes myzoom
+{
+from{transform:perspective(400px);}
+to{transform:perspective(10px);}
+}
+
+#box{
+width:500px;
+height:400px;
+background:black;
+margin:auto;
+perspective:300px;
+}
+
+#one{
+width:200px;
+height:250px;
+background:red;
+text-align:center;
+color:black;
+position:relative;
+left:150px;
+top:50px;
+animation-fill-mode:forwards;
+animation:ani2 6s linear infinite;
+background-image:url(images/7.jpg);
+background-size:cover;
+//backface-visibility:hidden;
+}
+
+
+#two{
+width:200px;
+height:250px;
+background:yellow;
+text-align:center;
+color:black;
+position:relative;
+left:150px;
+top:-200px;
+animation-fill-mode:forwards;
+animation:ani1 6s linear infinite;
+background-image:url(images/8.jpg);
+background-size:cover;
+//backface-visibility:hidden;
+}
+
+
+</style>
+
+
+
+<body>
+
+
+
+<div id="box">
+
+    <div id="one">
+     </div>
+
+    <div id="two">
+     </div>
+
+</div>
+    
+
+
+</body>
+
+
+</body>
+</html>
+
+
