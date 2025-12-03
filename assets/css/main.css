@@ -756,10 +756,11 @@ section,
 # Skills Section
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 60px;
+  height: 40px;
   display: block;
   background: none;
   border-radius: 0;
+  margin:auto;
 }
 
 .skills .progress .skill {
