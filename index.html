@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abhishek Kumar — UI/UX Designer & Web Developer</title>
+<meta name="description" content="Personal portfolio of Abhishek Kumar, a UI/UX Designer, Video Editor and Photo Retoucher based in Delhi, India." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+
+<link href="images/single-game.jpg" rel="icon">
+<link href="images/single-game.jpg" rel="apple-touch-icon">
+
+<style>
+  :root {
+    --primary: #1D232C;
+    --accent: #E62565;
+    --bg: #FFFFFF;
+    --text: #040B14;
+    --muted: #6b7280;
+    --card: #f7f7f9;
+    --border: #e5e7eb;
+    --heading-font: 'Raleway', sans-serif;
+    --body-font: 'Roboto', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body-font);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  h1, h2, h3, h4 { font-family: var(--heading-font); color: var(--primary); line-height: 1.2; }
+  a { color: var(--text); text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== Navbar ===== */
+  .navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--primary);
+    padding: 18px 0;
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: var(--heading-font); font-weight: 800; color: #fff; font-size: 22px; letter-spacing: 1px; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: #fff; font-size: 14px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-toggle { display: none; background: none; border: 0; color: #fff; font-size: 28px; cursor: pointer; }
+
+  /* ===== Sections ===== */
+  section { padding: 100px 0; }
+  .section-title { text-align: center; margin-bottom: 60px; }
+  .section-title h2 { font-size: 42px; font-weight: 800; text-transform: uppercase; }
+  .section-title h2::after {
+    content: ''; display: block; width: 60px; height: 3px;
+    background: var(--accent); margin: 16px auto 0;
+  }
+  .section-title p { color: var(--muted); margin-top: 12px; font-size: 16px; }
+
+  /* ===== Hero ===== */
+  .hero {
+    min-height: 100vh; background: var(--primary); color: #fff;
+    display: flex; align-items: center; padding-top: 80px;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+  .hero-badge {
+    display: inline-block; padding: 8px 18px; border: 1px solid var(--accent);
+    border-radius: 50px; color: var(--accent); font-size: 13px; font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .hero h1 { color: #fff; font-size: 72px; font-weight: 800; margin-bottom: 16px; }
+  .hero h1 .accent { color: var(--accent); display: block; }
+  .hero .role { font-size: 22px; color: #cbd5e1; margin-bottom: 36px; font-weight: 300; }
+  .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 28px; border-radius: 50px; font-weight: 600;
+    font-size: 14px; cursor: pointer; transition: all .2s; border: 0; letter-spacing: .5px;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #c41a55; transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: #fff; border: 1px solid #fff; }
+  .btn-outline:hover { background: #fff; color: var(--primary); }
+  .hero-photo { position: relative; display: flex; justify-content: center; }
+  .hero-photo img {
+    width: 360px; height: 360px; border-radius: 50%; object-fit: cover;
+    border: 4px solid var(--accent);
+    box-shadow: 0 20px 50px rgba(230, 37, 101, 0.25);
+  }
+  .hero-photo::before {
+    content: ''; position: absolute; width: 420px; height: 420px;
+    border-radius: 50%; border: 1px solid rgba(230, 37, 101, 0.4);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+  }
+
+  /* ===== About ===== */
+  .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: center; }
+  .about-photo img {
+    width: 100%; max-width: 360px; border-radius: 12px; object-fit: cover;
+    border: 4px solid var(--accent);
+  }
+  .about h3 { font-size: 28px; font-weight: 700; margin-bottom: 16px; color: var(--accent); }
+  .about > .container > .about-grid > div p.lead { font-style: italic; color: var(--muted); margin-bottom: 20px; }
+  .info-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin: 24px 0; }
+  .info-list li { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+  .info-list li::before { content: '▸'; color: var(--accent); font-weight: bold; }
+  .info-list strong { color: var(--primary); }
+
+  /* ===== Stats ===== */
+  .stats { background: var(--card); }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+  .stat-card { text-align: center; padding: 30px 20px; }
+  .stat-card .num { font-family: var(--heading-font); font-size: 48px; font-weight: 800; color: var(--accent); }
+  .stat-card .label { font-weight: 700; color: var(--primary); margin: 8px 0 4px; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
+  .stat-card .sub { font-size: 14px; color: var(--muted); }
+
+  /* ===== Skills ===== */
+  .skills-list { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .skill-badge {
+    padding: 10px 22px; border: 1px solid var(--border); border-radius: 50px;
+    background: #fff; font-weight: 500; font-size: 15px; color: var(--primary);
+    transition: all .2s;
+  }
+  .skill-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateY(-2px); }
+
+  /* ===== Resume ===== */
+  .resume { background: var(--card); }
+  .resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .resume-block { background: #fff; padding: 30px; border-radius: 12px; border-left: 4px solid var(--accent); }
+  .resume-block h3 { font-size: 22px; margin-bottom: 20px; text-transform: uppercase; }
+  .resume-item { margin-bottom: 24px; padding-left: 20px; border-left: 2px solid var(--border); }
+  .resume-item h4 { font-size: 17px; margin-bottom: 4px; }
+  .resume-item .date { display: inline-block; padding: 4px 12px; background: rgba(230, 37, 101, 0.1); color: var(--accent); border-radius: 50px; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+  .resume-item p { color: var(--muted); font-size: 14px; }
+  .resume-item ul { padding-left: 18px; color: var(--muted); font-size: 14px; }
+  .resume-cta { text-align: center; margin-top: 40px; }
+
+  /* ===== Portfolio ===== */
+  .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .portfolio-card {
+    background: #fff; border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--border); transition: all .3s;
+  }
+  .portfolio-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(230, 37, 101, 0.15); border-color: var(--accent); }
+  .portfolio-thumb { height: 200px; background: var(--primary); display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--heading-font); font-size: 28px; font-weight: 800; text-transform: uppercase; position: relative; overflow: hidden; }
+  .portfolio-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(230,37,101,0.3) 0%, transparent 50%); }
+  .portfolio-info { padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+  .portfolio-info h4 { font-size: 18px; }
+  .portfolio-info a { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .portfolio-info a:hover { text-decoration: underline; }
+
+  /* ===== Services ===== */
+  .services { background: var(--card); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-card {
+    background: #fff; padding: 36px 28px; border-radius: 12px; text-align: center;
+    transition: all .3s; border-top: 3px solid transparent;
+  }
+  .service-card:hover { transform: translateY(-6px); border-top-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+  .service-icon {
+    width: 70px; height: 70px; margin: 0 auto 20px; border-radius: 50%;
+    background: rgba(230, 37, 101, 0.1); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; font-weight: 700; font-family: var(--heading-font);
+  }
+  .service-card h4 { font-size: 19px; margin-bottom: 12px; }
+  .service-card p { color: var(--muted); font-size: 14px; }
+
+  /* ===== Contact ===== */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+  .contact-info { background: var(--card); padding: 36px; border-radius: 12px; }
+  .contact-item { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
+  .contact-icon {
+    width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
+    background: rgba(230, 37, 101, 0.1); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-family: var(--heading-font);
+  }
+  .contact-item h4 { font-size: 16px; margin-bottom: 4px; }
+  .contact-item p, .contact-item a { color: var(--muted); font-size: 14px; }
+  .contact-form { background: var(--card); padding: 36px; border-radius: 12px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group input, .form-group textarea {
+    width: 100%; padding: 14px 18px; border: 1px solid var(--border);
+    border-radius: 8px; font-family: inherit; font-size: 14px;
+    background: #fff; transition: border .2s;
+  }
+  .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+  .form-group textarea { min-height: 140px; resize: vertical; }
+  .form-success { display: none; padding: 12px 16px; background: rgba(230, 37, 101, 0.1); color: var(--accent); border-radius: 8px; margin-bottom: 16px; font-size: 14px; }
+  .form-success.show { display: block; }
+
+  /* ===== Footer ===== */
+  footer { background: var(--primary); color: #fff; padding: 50px 0 24px; text-align: center; }
+  footer h3 { color: #fff; margin-bottom: 8px; font-size: 26px; }
+  footer p { color: #cbd5e1; margin-bottom: 24px; }
+  .footer-links { display: flex; gap: 16px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
+  .footer-links a {
+    color: #fff; padding: 8px 18px; border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px; font-size: 13px; transition: all .2s;
+  }
+  .footer-links a:hover { background: var(--accent); border-color: var(--accent); }
+  .copyright { padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: #94a3b8; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .nav-toggle { display: block; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--primary); flex-direction: column; padding: 20px; gap: 16px; }
+    .nav-links.open { display: flex; }
+    .hero-grid, .about-grid, .resume-grid, .contact-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 48px; }
+    .stats-grid, .portfolio-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .info-list { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-photo img { width: 260px; height: 260px; }
+    .hero-photo::before { width: 310px; height: 310px; }
+    section { padding: 70px 0; }
+    .section-title h2 { font-size: 32px; }
+  }
+  @media (max-width: 560px) {
+    .stats-grid, .portfolio-grid, .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" style="position: fixed;">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">ABHISHEK<span>.</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">=</button>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<!-- Hero -->
+
+
+
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-badge">Available for Full-time & Freelance</span>
+      <h1>Hi, I'm <span class="accent">Abhishek Kumar</span></h1>
+      <p class="role">UI/UX Designer, Video Editor &amp; Photo Retoucher</p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn btn-danger">View Portfolio</a>
+        <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/ChatGPT Image Apr 29, 2026, 11_25_33 AM.png" alt="Abhishek Kumar" onerror="this.src='https://via.placeholder.com/360x360/E62565/ffffff?text=AK'" />
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About</h2>
+      <p>Get to know me a little better</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="images/ChatGPT Image Apr 29, 2026, 11_29_30 AM.png" alt="Abhishek Kumar" onerror="this.src='https://via.placeholder.com/360x360/1D232C/E62565?text=Abhishek'" />
+      </div>
+      <div>
+        <h3>UI/UX Designer &amp; Web Developer</h3>
+        <p class="lead">I'm a UI/UX Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design.</p>
+        <ul class="info-list">
+          <li><strong>Birthday:</strong>&nbsp;15 Feb</li>
+          <li><strong>Degree:</strong>&nbsp;Graduate</li>
+          <li><strong>Phone:</strong>&nbsp;+91 8130631970</li>
+          <li><strong>Email:</strong>&nbsp;itsjoeychandler@gmail.com</li>
+          <li><strong>City:</strong>&nbsp;Delhi, INDIA</li>
+          <li><strong>Freelance:</strong>&nbsp;Available</li>
+        </ul>
+        <p>"As a recent graduate with a degree in graphic design, I'm excited to launch my career in UI &amp; UX design. Skilled in Adobe Creative Suite, After Effects, and Bootstrap, I'm passionate about creating intuitive and user-friendly interfaces for web and mobile applications."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num">50+</div><div class="label">Thumbnails</div><div class="sub">Happy Ideas</div></div>
+      <div class="stat-card"><div class="num">48</div><div class="label">Projects</div><div class="sub">Time Management</div></div>
+      <div class="stat-card"><div class="num">24</div><div class="label">Hours Of Support</div><div class="sub">Following The Trends</div></div>
+      <div class="stat-card"><div class="num">1</div><div class="label">Hard Worker</div><div class="sub">Always Supportive</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="container">
+    <div class="section-title">
+      <h2>Skills</h2>
+      <p>Tools and software I work with</p>
+    </div>
+    <div class="skills-list">
+      <span class="skill-badge">HTML</span>
+      <span class="skill-badge">CSS</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">Bootstrap</span>
+      <span class="skill-badge">Adobe After Effects</span>
+      <span class="skill-badge">Adobe Premiere Pro</span>
+      <span class="skill-badge">ChatGPT</span>
+      <span class="skill-badge">Motions</span>
+      <span class="skill-badge">PHP</span>
+      <span class="skill-badge">WordPress / CMS</span>
+      <span class="skill-badge">Photoshop</span>
+      <span class="skill-badge">Figma</span>
+      <span class="skill-badge">jQuery</span>
+      <span class="skill-badge">CapCut</span>
+      <span class="skill-badge">Prompting</span>
+      <span class="skill-badge">More AI</span>
+    </div>
+  </div>
+</section>
+
+<!-- Resume -->
+<section class="resume" id="resume">
+  <div class="container">
+    <div class="section-title">
+      <h2>Resume</h2>
+      <p>My goal is to associate with a company where I can utilize my skills and grow.</p>
+    </div>
+    <div class="resume-grid">
+      <div class="resume-block">
+        <h3>Education</h3>
+        <div class="resume-item">
+          <span class="date">2023 - 2025</span>
+          <h4>Arena Animation GTB Nagar</h4>
+          <p><em>Front-end Developer</em></p>
+          <p>A UI/UX Designer is responsible for creating digital experiences that are both visually appealing and easy to use.</p>
+        </div>
+        <div class="resume-item">
+          <span class="date">2018 - 2021</span>
+          <h4>BA Political Science Honours</h4>
+          <p><em>Delhi University</em></p>
+          <p>Concepts like democracy, liberty, equality, justice and political ideologies.</p>
+        </div>
+      </div>
+      <div class="resume-block">
+        <h3>Achievements &amp; Personality</h3>
+        <div class="resume-item">
+          <h4>AOTM — Arena Animation</h4>
+          <p><em>5 Time Winner, 2 Time Nominee (Websites &amp; Apps)</em></p>
+        </div>
+        <div class="resume-item">
+          <h4>Personality Traits</h4>
+          <ul>
+            <li>Ability to handle any work situation</li>
+            <li>Hardworking and honest</li>
+            <li>Confident and result oriented</li>
+            <li>Polite and pleasant behaviour</li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <h4>Interests</h4>
+          <ul>
+            <li>Anime</li>
+            <li>Editing</li>
+            <li>Phonk</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="resume-cta">
+      <a href="images/Abhishekk.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-title">
+      <h2>Portfolio</h2>
+      <p>Working live sites</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1D232C, #E62565);"> <img src="https://images.indianexpress.com/2025/09/iPhone-17-series-Apple.jpg?w=1200 ">Apple</div>
+        <div class="portfolio-info"><h4>Apple iPhone</h4><a href="https://aphishek1.github.io/apple/" target="_blank" rel="noopener">Live →</a></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #2c5530, #6dbf45);"> <img src="https://img.redbull.com/images/c_limit,w_1500,h_1000/f_auto,q_auto/redbullcom/2018/04/18/3defc76b-795c-4cfa-a005-c2fabd43f6fb/adventure-travel-cliff "> Adventure</div>
+        <div class="portfolio-info"><h4>Adventure Tour</h4><a href="https://aphishek1.github.io/world/" target="_blank" rel="noopener">Live →</a></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #2563eb, #06b6d4);"> <img src="https://leoguarbikes.com/cdn/shop/articles/51f32793674948fbbc0dec4dca98985d.webp?v=1760487612&width=1600 "> Cycle</div>
+        <div class="portfolio-info"><h4>Modern Cycle</h4><a href="https://aphishek1.github.io/cycle/" target="_blank" rel="noopener">Live →</a></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #dc2626, #1D232C);"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoMrPOZ4dTLj1f6lcOOr-RX8w346p3ArR9CA&s "> Formula 1</div>
+        <div class="portfolio-info"><h4>Formula F1</h4><a href="https://aphishek1.github.io/f1/" target="_blank" rel="noopener">Live →</a></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #0891b2, #fbbf24);"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX1RDyP9DPvpv-LCI1YV70RMprFR2LfhGfZQ&s "> Resort</div>
+        <div class="portfolio-info"><h4>Resort</h4><a href="https://aphishek1.github.io/resort/" target="_blank" rel="noopener">Live →</a></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #166534, #84cc16);"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNzoo96XjY414lplQzw02--cj5DBGJrM596Q&s "> Leaf</div>
+        <div class="portfolio-info"><h4>Leaf Travel</h4><a href="https://aphishek1.github.io/leaf/" target="_blank" rel="noopener">Live →</a></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #581c87, #E62565);"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqvDxhS8gX9LYOvbA9F9BVKsMxOp_V0Ouxmw&s "> Dance Night</div>
+        <div class="portfolio-info"><h4>Dance Night</h4><a href="https://aphishek1.github.io/night/" target="_blank" rel="noopener">Live →</a></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1e40af, #1D232C);"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkKCv_1brl7-YvTH0ftHOkqrO6PSINZH2Pow&s "> Store</div>
+        <div class="portfolio-info"><h4>Electronic Store</h4><a href="https://aphishek1.github.io/store/" target="_blank" rel="noopener">Live →</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="resume-cta">
+    <a href="site.html" target="_blank" rel="noopener" class="btn btn-danger">MOre</a>
+  </div>
+
+
+</section>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Older Days</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-danger"><a href="prcp.html" target="_blank">Pages</a></button>
+        <button type="button" class="btn btn-danger"><a href="proj.html" target="_blank">Competition</a></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Services</h2>
+      <p>What I can do for you</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">UX</div>
+        <h4>UI / UX Design</h4>
+        <p>Creating intuitive and visually appealing interfaces for websites and apps.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">VE</div>
+        <h4>Video Editing</h4>
+        <p>Editing raw footage into polished videos for social media, advertisements, or personal projects.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">PR</div>
+        <h4>Photo Retouching</h4>
+        <p>Improving image quality, color correction, and professional editing.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">MG</div>
+        <h4>Motion Graphics</h4>
+        <p>Designing animated graphics for videos, presentations, or advertisements.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">BR</div>
+        <h4>Branding &amp; Visual Identity</h4>
+        <p>Designing logos, color schemes, and visual assets for businesses.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">SM</div>
+        <h4>Social Media Content</h4>
+        <p>Designing graphics, posts, and short videos optimized for social platforms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>I'm available for full-time jobs and projects</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">A</div>
+          <div><h4>Address</h4><p>Delhi 110054, India</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">P</div>
+          <div><h4>Call Me</h4><a href="tel:+918130631970">+91 8130631970</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">E</div>
+          <div><h4>Email Me</h4><a href="mailto:itsjoeychandler@gmail.com">itsjoeychandler@gmail.com</a></div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.add('show'); this.reset();">
+        <div id="formSuccess" class="form-success">Your message has been sent. Thank you!</div>
+        <div class="form-row">
+          <div class="form-group"><input type="text" placeholder="Your Name" required /></div>
+          <div class="form-group"><input type="email" placeholder="Your Email" required /></div>
+        </div>
+        <div class="form-group"><input type="text" placeholder="Subject" required /></div>
+        <div class="form-group"><textarea placeholder="Message" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <h3>Abhishek Kumar</h3>
+    <p>UI/UX Designer · Video Editor · Photo Retoucher</p>
+    <div class="footer-links">
+      <a href="https://www.behance.net/43c4d6f5" target="_blank" rel="noopener">Behance</a>
+      <a href="https://rumble.com/c/c-6816266" target="_blank" rel="noopener">Rumble</a>
+      <a href="https://aphishek1.github.io/view" target="_blank" rel="noopener">Website</a>
+      <a href="https://www.linkedin.com/in/abhishek-kumar-732262230" target="_blank" rel="noopener">Linkedin</a>
+    </div>
+    <div class="copyright">© 2026 Abhishek Kumar. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
