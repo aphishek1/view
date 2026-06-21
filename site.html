@@ -1,7 +1,14 @@
-<!doctype html>
-<html>
-<head> <title>List</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek | Creative Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
+    
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  
 
@@ -12,152 +19,371 @@
 
 <link href="images/cross.png" rel="icon">
 
-</head>
+<link rel="stylesheet" link href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
 
+<script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 
 
 
 
 <body>
-<a href="index.html">
-<i class="fa-solid fa-backward fa-bounce fa-xl" style="color: #74C0FC;"></i>
-</a>
+    <a href="index.html">
+    <i class="fa-solid fa-backward fa-bounce fa-xl" style="color: #74C0FC;"></i>
+    </a>
 </body>
 
 
-
-<style>
-
-
-
-</style>
-
-
-
-<a href="images/bgv.html">
-
-</a>
-
-
-
-
-
-
-
-
-
-<style>
-
-@keyframes ani1
-{
-from{margin-left:0px;}
-to{margin-left:-200%}
-}
-
-
-
-
-</style>
-
-
-
-<style>
-
-#myheading2
-{
-color:#F06417;
-display:block;
-width:100%;
-font-size:60px;
-text-shadow:5px 5px 5px black;
-animation:blink 9s;
-}
-
-
-
-
-</style>
-</head>
-
-<body>
-
-
-
-
     
+    <style>
+        /* Modern Design System Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: all 0.25s ease;
+        }
+
+        body {
+            background-color: #f6f8fa;
+            color: #111111;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Glassmorphism Navigation Bar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 24px;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #0057ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        nav ul li a {
+            color: #555;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #0057ff;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-secondary {
+            border: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            background: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #f1f1f1;
+            border-color: #ccc;
+        }
+
+        .btn-primary {
+            background-color: #0057ff;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 14px rgba(0, 87, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #0044cc;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 87, 255, 0.3);
+        }
+
+        /* Profile & Hero Branding Section */
+        .hero-banner {
+            max-width: 1400px;
+            margin: 40px auto 20px auto;
+            padding: 0 40px;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .profile-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .status-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: #10b981;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+
+        .profile-info h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .profile-tagline {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .profile-meta {
+            font-size: 14px;
+            color: #999;
+            display: flex;
+            gap: 15px;
+            font-weight: 500;
+        }
+
+        .profile-meta span i {
+            margin-right: 5px;
+            color: #555;
+        }
+
+        /* Stats Trackers */
+        .profile-stats {
+            display: flex;
+            gap: 40px;
+            background: #fdfdfd;
+            border: 1px solid #f0f0f0;
+            padding: 20px 35px;
+            border-radius: 12px;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 22px;
+            font-weight: 800;
+            color: #111;
+        }
+
+        .stat-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        /* Portfolio Work Feed */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto 80px auto;
+            padding: 0 40px;
+        }
+
+        .filter-tab-bar {
+            display: flex;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .tab-item {
+            padding: 15px 5px;
+            font-weight: 700;
+            font-size: 15px;
+            color: #71717a;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-item.active {
+            color: #111111;
+        }
+
+        .tab-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #111;
+            border-radius: 3px 3px 0 0;
+        }
+
+        /* Grid Cards Layout */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.03);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.07);
+        }
+
+        .card-cover {
+            width: 100%;
+            height: 270px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Mock beautiful background covers natively */
+        .thumb-1 { background-image: url('https://cdn.mos.cms.futurecdn.net/xzkhQVxGwR4MP8B6ZXM6A7-1200-80.jpg'); }
+
+        .thumb-2 { background-image: url('https://vihartravels.in/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-26-at-10.19.48-AM.jpeg'); }
+
+        .thumb-3 { background-image: url('https://vmn-bike-eu.imgix.net/uploads/2021/06/Modyn-and-bicycle-design-image-1.jpg?auto=compress%2Cformat&q=50'); }
+
+        .thumb-4 { background-image: url('https://d.newsweek.com/en/full/2607972/f1-grand-prix-australia.jpg?w=1200&f=ae2093490fa804e31195f6c46e421ffc'); }
+
+        .thumb-5 { background-image: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/649200483.jpg?k=4cbcfca493b13faa39df6269723f85c299e52b1d46b7b695893948e469b17e77&o=&hp=1'); }
+
+        .thumb-6 { background-image: url('https://www.nps.gov/subjects/trails/images/hiking-family-NPS-neil-herbert-YELL.jpg?maxwidth=1300&autorotate=false'); }
+
+        .thumb-7 { background-image: url('https://grazia.wwmindia.com/content/2025/mar/coldplay11741266533.jpg'); }
+
+        .thumb-8 { background-image: url('https://runningmagazine.ca/wp-content/uploads/2025/03/nike-streakfly-2-proto-lateral.jpg'); }
+
+        .thumb-9 { background-image: url('https://static.vecteezy.com/system/resources/previews/027/736/449/large_2x/supermarket-anime-visual-novel-game-generate-ai-photo.jpg'); }
+
+        .thumb-10 { background-image: url('https://hips.hearstapps.com/hmg-prod/images/fashion-boutique-forty-five-tenwebversion-8-1568408991.jpg'); }
+
+        .thumb-11 { background-image: url('https://damroimages.blob.core.windows.net/damroimages/12799.jpg'); }
+
+        .thumb-12 { background-image: url('https://i.ytimg.com/vi/_VqyPF8RTVg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDRPts-nsZWPgKfJil7bYQ4uXafQg'); }
+
+        .thumb-13 { background-image: url('https://okcredit-blog-images-prod.storage.googleapis.com/2020/12/electronics4.jpg'); }
+
+        .thumb-14 { background-image: url('https://contentstatic.techgig.com/photo/116056563/google-search-to-tackle-complex-queries-with-2025-ai-overhaul.jpg?105383'); }
+
+        .thumb-15 { background-image: url('https://s6573.pcdn.co/wp-content/uploads/2025/01/The-Smurfs-Movie.webp'); }
 
 
-<br>
+        .thumb-16 { background-image: url('https://imgproxy.domestika.org/unsafe/w:1200/rs:fill/plain/src://blog-post-open-graph-covers/000/011/495/11495-original.jpg?1694449220'); }
+
+
+        .thumb-17 { background-image: url('https://www.bluekraft.in/wp-content/uploads/2025/03/what-is-ai-1.jpg'); }
+
+
+        .thumb-18 { background-image: url('https://static0.srcdn.com/wordpress/wp-content/uploads/2021/09/combined-images-from-the-games-Stardew-Valley-Shovel-Knight-Dead-Cells-and-Celeste.jpg'); }
 
 
 
 
-<div class="container text-center bg-dark">
-    <div class="row">
-       <div class="col-md-12 p-3">
-          <div class="title text-center text-light fs-2">
-             <h2>Work IN Progress</h2>
-          </div>
-       </div>
-    </div>
-</div>
-  
-  
+        
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #111;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 70%;
+        }
+
+        .card-engagement {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .card-engagement span i {
+            margin-right: 4px;
+        }
+
+        .card-engagement span:first-child:hover i {
+            color: #ff2a54;
+        }
 
 
-
-</style>
-
-
-
-
-
-
-
-
-
-<style>
-
- 
-
-@keyframes comfromright
-{
-from{margin-right:0px;}
-to{margin-right:990px;}
-}
-
-@keyframes fadout
-{
-from{opacity:0;transform:scale(1.5);}
-to{opacity:0.99;}
-}
-
-@keyframes blink
-{from{opacity:0}
-to{opacity:1}
-}
-
-
-@keyframes move
-{
-from{margin-left:30%;}
-to{margin-left:-30px;}
-}
-
-
-#myheading1
-{
-color:#fbd10d;
-display:block;
-font-size:100px;
-width:60%;
-text-shadow:5px 5px 5px black;
-animation:move 3s ease-in infinite alternate;
-
-}
-
-
-.blog-item img {
+        .blog-item img {
     transition: .5s;
 }
 
@@ -175,293 +401,360 @@ animation:move 3s ease-in infinite alternate;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    background: linear-gradient(rgba(52, 173, 84, 0), rgba(52, 173, 84, 1));
+    background: linear-gradient(rgba(52, 173, 84, 0), rgb(217, 230, 220));
     z-index: 1;
 }
 
 
 
+        /* Footer Custom Area */
+        footer {
+            background: #ffffff;
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #eef0f2;
+            font-size: 14px;
+            color: #777;
+            font-weight: 500;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            header { padding: 16px 20px; }
+            .hero-banner, .main-container { padding: 0 20px; }
+            .profile-card { flex-direction: column; align-items: flex-start; padding: 30px; }
+            .profile-stats { width: 100%; justify-content: space-around; }
+        }
+
+        @media (max-width: 600px) {
+            nav { display: none; }
+            .profile-left { flex-direction: column; text-align: center; align-items: center; width: 100%; }
+            .profile-meta { justify-content: center; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+        }
 
 
+        /* Updated Grid for exactly 3 boxes per row */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 equal columns in a single line */
+    gap: 30px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 650px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile phones */
+    }
+}
 
 
-</style>
+    </style>
 </head>
-
 <body>
 
-
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="mx-auto text-center mb-5" style="max-width: 500px;">
-                <h6 class="text-primary text-uppercase">My Blog</h6>
-                <h1 class="display-5">Latest Work</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://cdn.mos.cms.futurecdn.net/xzkhQVxGwR4MP8B6ZXM6A7-1200-80.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/apple/">
-                            <h4 class="text">Apple Iphone 16</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://vihartravels.in/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-26-at-10.19.48-AM.jpeg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/world/">
-                            <h4 class="text">Travel Tour</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://vmn-bike-eu.imgix.net/uploads/2021/06/Modyn-and-bicycle-design-image-1.jpg?auto=compress%2Cformat&q=50" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/cycle/">
-                            <h4 class="text">Modern Cycle</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://d.newsweek.com/en/full/2607972/f1-grand-prix-australia.jpg?w=1200&f=ae2093490fa804e31195f6c46e421ffc" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/f1/">
-                            <h4 class="text">Formula F1</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/649200483.jpg?k=4cbcfca493b13faa39df6269723f85c299e52b1d46b7b695893948e469b17e77&o=&hp=1" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/resort/">
-                            <h4 class="text">Resort</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://www.nps.gov/subjects/trails/images/hiking-family-NPS-neil-herbert-YELL.jpg?maxwidth=1300&autorotate=false" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/leaf/">
-                            <h4 class="text">Leaf Travel</h4>
-                        </a>
-                            
-                    </div>
-                </div>
-
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://grazia.wwmindia.com/content/2025/mar/coldplay11741266533.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/night/">
-                            <h4 class="text">Disco Night</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://runningmagazine.ca/wp-content/uploads/2025/03/nike-streakfly-2-proto-lateral.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/shoes/">
-                            <h4 class="text">Shoes Site</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://static.vecteezy.com/system/resources/previews/027/736/449/large_2x/supermarket-anime-visual-novel-game-generate-ai-photo.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/mini/">
-                            <h4 class="text">Mini Store</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://hips.hearstapps.com/hmg-prod/images/fashion-boutique-forty-five-tenwebversion-8-1568408991.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/Shopu/">
-                            <h4 class="text">Shop Uncle</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://damroimages.blob.core.windows.net/damroimages/12799.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/sofas/">
-                            <h4 class="text">Seat Sofa</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://i.ytimg.com/vi/_VqyPF8RTVg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDRPts-nsZWPgKfJil7bYQ4uXafQg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/gta/">
-                            <h4 class="text">GTA 6</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://okcredit-blog-images-prod.storage.googleapis.com/2020/12/electronics4.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/store/">
-                            <h4 class="text">Electronic Store</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://contentstatic.techgig.com/photo/116056563/google-search-to-tackle-complex-queries-with-2025-ai-overhaul.jpg?105383" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/google/">
-                            <h4 class="text">Google</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://s6573.pcdn.co/wp-content/uploads/2025/01/The-Smurfs-Movie.webp" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/smurf/">
-                            <h4 class="text">Smurfs</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://imgproxy.domestika.org/unsafe/w:1200/rs:fill/plain/src://blog-post-open-graph-covers/000/011/495/11495-original.jpg?1694449220" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/tan/">
-                            <h4 class="text">Client Site</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://www.bluekraft.in/wp-content/uploads/2025/03/what-is-ai-1.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/ai/">
-                            <h4 class="text">SmartAi</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-              <div class="col-lg-4">
-                    <div class="blog-item position-relative overflow-hidden">
-                        <img class="img-fluid" src="https://static0.srcdn.com/wordpress/wp-content/uploads/2021/09/combined-images-from-the-games-Stardew-Valley-Shovel-Knight-Dead-Cells-and-Celeste.jpg" alt="">
-                        <a class="blog-overlay" href="https://aphishek1.github.io/pixel/">
-                            <h4 class="text">Pixel Studio</h4>
-                            
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-
-
-            </div>
+    <div class="container text-center bg-dark">
+        <div class="row">
+           <div class="col-md-12 p-3">
+              <div class="title text-center text-light fs-2">
+                 <h2>Work IN Progress</h2>
+              </div>
+           </div>
         </div>
     </div>
 
+    
+
+    <section class="hero-banner">
+        <div class="profile-card">
+            <div class="profile-left">
+                <div class="avatar-wrapper">
+                    <img src="https://pps.services.adobe.com/api/profile/317569D05EFFFE510A495FAF@AdobeID/image/47b74eb5-73be-474d-b572-03545ec5d3eb/100" alt="Abhishek" class="avatar">
+                    <div class="status-badge"></div>
+                </div>
+                <div class="profile-info">
+                    <h1>Abhishek Kumar</h1>
+                    <p class="profile-tagline">Creative UI UX Artist</p>
+                    <div class="profile-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Delhi </span>
+                        <span><i class="fa-solid fa-link"></i> github.com/Aphishek1</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-stats">
+                <div class="stat-box">
+                    <div class="stat-num">870+</div>
+                    <div class="stat-title">Views</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">74</div>
+                    <div class="stat-title">Appreciations</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="mx-auto text-center mb-5" style="max-width: 500px;">
+        <h6 class="text-primary text-uppercase">My Blog</h6>
+        
+    </div>
+
+    <main class="main-container">
+        <div class="filter-tab-bar">
+            <div class="tab-item active">Featured Work</div>
+            
+        </div>
+
+        <div class="portfolio-grid">
+            
+            <div class="card">
+                <div class="card-cover thumb-1"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/apple/">
+                <div class="card-body">
+                    <div class="card-title">Apple Iphone 16</div>
+                    <div class="card-engagement">
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-cover thumb-2"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/world/">
+                <div class="card-body">
+                    <div class="card-title">Travel Tour</div>
+                    <div class="card-engagement">
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-cover thumb-3"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/cycle/">
+                <div class="card-body">
+                    <div class="card-title">Modern Cycle</div>
+                    <div class="card-engagement">
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-cover thumb-4"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/f1/">
+                <div class="card-body">
+                    <div class="card-title">Formula F1</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-cover thumb-5"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/resort/">
+                <div class="card-body">
+                    <div class="card-title">Resort</div>
+                    <div class="card-engagement">
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-cover thumb-6"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/leaf/">
+                <div class="card-body">
+                    <div class="card-title">Leaf Travel</div>
+                    <div class="card-engagement">
+                    </a>   
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-cover thumb-7"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/night/">
+                <div class="card-body">
+                    <div class="card-title">Disco Night</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-cover thumb-8"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/shoes/">
+                <div class="card-body">
+                    <div class="card-title">Shoes Site</div>
+                    <div class="card-engagement">
+                    </a>   
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-9"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/mini/">
+                <div class="card-body">
+                    <div class="card-title">Mini Store</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-10"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/Shopu/">
+                <div class="card-body">
+                    <div class="card-title">Shop Uncle</div>
+                    <div class="card-engagement">
+                    </a> 
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-11"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/sofas/">
+                <div class="card-body">
+                    <div class="card-title">Seat Sofa</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-12"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/gta/">
+                <div class="card-body">
+                    <div class="card-title">GTA 6</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-13"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/store/">
+                <div class="card-body">
+                    <div class="card-title">Electronic Store</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-14"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/google/">
+                <div class="card-body">
+                    <div class="card-title">Google</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-15"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/smurf/">
+                <div class="card-body">
+                    <div class="card-title">Smurfs</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-16"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/tan/">
+                <div class="card-body">
+                    <div class="card-title">Client Site</div>
+                    <div class="card-engagement">
+                    </a>   
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="card-cover thumb-17"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/ai/">
+                <div class="card-body">
+                    <div class="card-title">SmartAi</div>
+                    <div class="card-engagement">
+                    </a>  
+                    </div>
+                </div>
+            </div>
 
 
 
 
 
 
+            <div class="card">
+                <div class="card-cover thumb-18"></div>
+                <a class="blog-overlay" href="https://aphishek1.github.io/pixel/">
+                <div class="card-body">
+                    <div class="card-title">Pixel Studio</div>
+                    <div class="card-engagement">
+                    </a>
+                    </div>
+                </div>
+            </div>
 
 
 
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 All Rights Reserved.</p>
+    </footer>
 
 </body>
-
-
-<body>
-
-<style>
-
-
-
-
-
-
-
-
-a:link{color:black;text-decoration:overline}
-a:visited{color:white;}
-a:hover{text-decoration:underline black;color:black}
-
-</style>
-
-<body>
-
-
-
-
-</body>
-
-<link rel="stylesheet" link href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-
-<script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-
-
-
-
 </html>
-
-
